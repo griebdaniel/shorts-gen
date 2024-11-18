@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import CreateShort from "@/components/create-short";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <Button>Counter 2</Button>
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <CreateShort />
     </div>
   );
 }
