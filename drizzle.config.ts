@@ -5,10 +5,10 @@ export default {
   out: "./drizzle",
   dialect: "postgresql",
   dbCredentials: {
-    host: "ep-dark-violet-a5cijgtk.us-east-2.aws.neon.tech",
-    user: "shorts_gen_owner",
-    password: "WEbXux63ykIa",
-    database: "shorts_gen",
+    host: process.env.DATABASE_HOST!,
+    user: process.env.DATABASE_USER!,
+    password: process.env.DATABASE_PASSWORD!,
+    database: process.env.DATABASE_NAME!,
     ssl: true,
   },
 } satisfies Config;

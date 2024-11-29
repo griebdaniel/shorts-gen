@@ -1,0 +1,119 @@
+{
+  "id": "41ef7996-8258-481b-bdcb-c300fe2861f3",
+  "prevId": "269857fa-d439-4a50-bed3-f2f9813e5aa2",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.background_music": {
+      "name": "background_music",
+      "schema": "",
+      "columns": {
+        "music_id": {
+          "name": "music_id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "music_label": {
+          "name": "music_label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "music_url": {
+          "name": "music_url",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.styles": {
+      "name": "styles",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image_url": {
+          "name": "image_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.voices": {
+      "name": "voices",
+      "schema": "",
+      "columns": {
+        "voice_id": {
+          "name": "voice_id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "voice_label": {
+          "name": "voice_label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "voice_url": {
+          "name": "voice_url",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

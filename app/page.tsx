@@ -1,4 +1,4 @@
-import CreateShort from "@/components/create-short-form";
+import CreateShort from "@/app/components/create-short-form";
 
 export default function Home() {
   return (
