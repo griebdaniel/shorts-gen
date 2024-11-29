@@ -1,4 +1,4 @@
-import CreateShort from "@/components/create";
+import CreateShort from "@/components/create-short-form";
 
 export default function CreateShortPage() {
   return (

@@ -1,8 +1,10 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { useFontStyle, useFontStyleAutoPick } from "@/components/create/state";
-import { FieldLabel } from "@/components/create/fields/field-label";
+import { FieldLabel } from "@/components/create-short-form/fields/field-label";
 
 export function FontStyleField() {
   const [fontStyle, setFontStyle] = useFontStyle();
