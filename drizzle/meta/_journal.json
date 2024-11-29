@@ -43,6 +43,13 @@
       "when": 1732874966115,
       "tag": "0005_acoustic_mentallo",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1732889702930,
+      "tag": "0006_lazy_wild_pack",
+      "breakpoints": true
     }
   ]
 }
