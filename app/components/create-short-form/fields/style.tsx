@@ -2,7 +2,7 @@
 
 import type { Style } from "@/app/db/schema";
 import { signal } from "@preact-signals/safe-react";
-import { SelectableImageList } from "@/app/components/my-ui/selectable-image-list";
+import { SelectableImageList } from "@/app/components/ui-elements/selectable-image-list";
 import { AutoPick } from "./utils/auto-pick";
 import { FormField } from "./utils/form-field";
 

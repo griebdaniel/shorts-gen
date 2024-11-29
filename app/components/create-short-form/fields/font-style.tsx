@@ -1,7 +1,7 @@
 "use client";
 
 import { signal } from "@preact-signals/safe-react";
-import { SelectableFontImageList } from "@/app/components/my-ui/selectable-font-image-list";
+import { SelectableFontImageList } from "@/app/components/ui-elements/selectable-font-image-list";
 import { AutoPick } from "./utils/auto-pick";
 import { FormField } from "./utils/form-field";
 import type { FontStyle } from "@/app/db/schema";

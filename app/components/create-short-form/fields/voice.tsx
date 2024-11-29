@@ -1,7 +1,7 @@
 "use client";
 
 import { signal } from "@preact-signals/safe-react";
-import { SelectableVoicePlayerList } from "@/app/components/my-ui/selectable-voice-player-list";
+import { SelectableVoicePlayerList } from "@/app/components/ui-elements/selectable-voice-player-list";
 import { AutoPick } from "./utils/auto-pick";
 import { FormField } from "./utils/form-field";
 
