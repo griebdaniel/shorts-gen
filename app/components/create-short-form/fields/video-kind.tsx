@@ -8,33 +8,33 @@ import {
   SelectValue,
 } from "@/app/components/ui/select";
 import { FormField } from "./utils/form-field";
-import { signal } from "@preact-signals/safe-react";
+import { useFormContext } from "../form-provider";
 
 interface VideoKindFieldProps {
   videoKinds: { value: string; label: string }[];
 }
 
-export const videoKind = signal<string>("");
-
 export function VideoKindField({ videoKinds }: VideoKindFieldProps) {
+  const form = useFormContext();
+
   return (
     <FormField label="Video Kind">
-      <Select
-        name="video-kind"
-        value={videoKind.value}
-        onValueChange={(value) => (videoKind.value = value)}
-      >
-        <SelectTrigger id="video-kind">
-          <SelectValue placeholder={"Select a video kind"} />
-        </SelectTrigger>
-        <SelectContent>
-          {videoKinds.map(({ value, label }) => (
-            <SelectItem key={value} value={value}>
-              {label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      <form.Field name="videoKind">
+        {(field) => (
+          <Select value={field.state.value} onValueChange={field.handleChange}>
+            <SelectTrigger id="video-kind">
+              <SelectValue placeholder="Select a video kind" />
+            </SelectTrigger>
+            <SelectContent>
+              {videoKinds.map(({ value, label }) => (
+                <SelectItem key={value} value={value}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        )}
+      </form.Field>
     </FormField>
   );
 }

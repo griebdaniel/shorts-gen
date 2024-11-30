@@ -1,29 +1,33 @@
 "use client";
 
-import { signal } from "@preact-signals/safe-react";
 import { SelectableVoicePlayerList } from "@/app/components/ui-elements/selectable-voice-player-list";
 import { AutoPick } from "./utils/auto-pick";
 import { FormField } from "./utils/form-field";
+import { useFormContext } from "../form-provider";
 
 interface BackgroundMusicFieldProps {
   musicOptions: { id: string; label: string; url: string }[];
 }
 
-export const selectedBackgroundMusic = signal("");
-
 export function BackgroundMusicField({
   musicOptions,
 }: BackgroundMusicFieldProps) {
+  const form = useFormContext();
+
   return (
     <FormField label="Background Music">
-      <AutoPick>
-        <SelectableVoicePlayerList
-          voices={musicOptions}
-          selectedId={selectedBackgroundMusic.value}
-          onSelect={(id) => (selectedBackgroundMusic.value = id)}
-          maxDisplayed={8}
-        />
-      </AutoPick>
+      <form.Field name="backgroundMusic">
+        {(field) => (
+          <AutoPick>
+            <SelectableVoicePlayerList
+              voices={musicOptions}
+              selectedId={field.state.value}
+              onSelect={(id) => field.handleChange(id)}
+              maxDisplayed={8}
+            />
+          </AutoPick>
+        )}
+      </form.Field>
     </FormField>
   );
 }
